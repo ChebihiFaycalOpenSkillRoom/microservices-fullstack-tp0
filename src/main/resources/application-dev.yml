@@ -1,0 +1,16 @@
+
+spring:
+  application:
+    name: complaints
+  jackson:
+    serialization:
+      INDENT_OUTPUT: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always

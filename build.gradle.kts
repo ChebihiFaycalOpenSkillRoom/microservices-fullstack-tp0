@@ -1,24 +1,24 @@
 plugins {
-    kotlin("jvm") version "2.2.0"
-    kotlin("plugin.spring") version "2.2.0"
-    id("org.springframework.boot") version "3.3.13"
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.kotlin.jvm)
+    alias(libs.plugins.kotlin.spring)
     id("io.spring.dependency-management") version "1.1.4"
 }
 
 group = "openskillroom.ma"
-version = "1.0-SNAPSHOT"
+version = "0.0.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation(kotlin("test"))
+    implementation(libs.spring.web)
+    implementation(libs.spring.validation)
+    implementation(libs.spring.actuator)
+    implementation(libs.jakson.kotlin)
+    testImplementation(libs.spring.test)
+
 }
 
 tasks.test {

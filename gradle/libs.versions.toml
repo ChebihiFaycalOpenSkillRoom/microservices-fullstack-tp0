@@ -1,0 +1,15 @@
+[versions]
+kotlin = "2.2.0"
+spring-boot = "3.3.13"
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+
+[libraries]
+spring-web = { module = "org.springframework.boot:spring-boot-starter-web" }
+spring-validation = { module = "org.springframework.boot:spring-boot-starter-validation" }
+spring-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator" }
+jakson-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
+spring-test = { module = "org.springframework.boot:spring-boot-starter-test" }
